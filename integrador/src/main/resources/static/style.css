@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header{
+  position: fixed;
+  width: 1000%;
+  margin-top: -800px;
+  height: 60px;
+  background-color: #023E8A;
+  border-bottom: 8px solid #0D0D6C;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}
+.texto{
+  display: flex;
+  justify-content: center;
+}
+
+
+body {
+  margin-top: 50px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C4C96;
+}
+
+button {
+  cursor: pointer;
+  width: 163px;
+  height: 40px;
+  /* transition: 0.5s ease; */
+}
+
+button#new {
+  width: 213px;
+  height: 40px;
+  margin-top: -100px;
+  background-color: #0077B6;
+  color: #fff;
+  font-size: 17px;
+  transition: 0.5s ease;
+}
+
+button#new:hover {
+  background-color: #1C4C96;
+  border: 1px solid #fff;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  background: #0077B6;
+}
+
+td {
+  color: #fff;
+  font-family: 'Inter';
+}
+
+.header {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 12px;
+  background-color: #0077B6;
+  border-radius: 15px 15px 0 0;
+}
+
+.header span {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: 'Inter';
+  margin-top: 10px;
+  margin-left: 5px;
+  word-break: break-all;
+  color: #fff;
+}
+
+#new {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(57, 57, 226);
+}
+
+.divTable {
+  padding: 10px;
+  width: auto;
+  height: inherit;
+  overflow: auto;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke;
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #1C4C96;
+  color: #fff;
+  height: 40px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 2px solid rgb(238, 235, 235)!important;
+}
+
+tbody tr td {
+  vertical-align: text-top;
+  padding: 6px;
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: start;
+}
+
+thead tr th.acao {
+  width: 120px!important;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+
+  td {
+    color: #fff;
+    font-family: 'Inter';
+  }
+
+  .header span {
+    font-size: 15px;
+  }
+
+  #new {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  thead tr th.acao {
+    width: auto!important;
+  }
+
+  td button i {
+    font-size: 20px!important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90%!important;
+  }
+
+  .modal label {
+    font-size: 12px!important;
+  }
+}
+
+@media (max-width: 400px) {}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container.active {
+  display: flex;  /* Torna o modal visível */
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #1C4C96;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 600px; /* Ajusta o tamanho máximo do modal */
+  color: #fff;
+  animation: modal .4s ease-in-out;
+}
+
+.modal label {
+  font-size: 27px;
+  width: 100%;
+  font-family: 'Inter';
+  margin-bottom: 10px; /* Adicionando espaçamento abaixo dos rótulos */
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  border: 1px solid #ccc; /* Borda fina para campos de input */
+  border-radius: 5px;
+  background-color: #0077B6; /* Cor de fundo suave */
+}
+
+.modal button {
+  width: 200px;
+  height: 52px;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #062863;
+  color: white;
+  font-family: 'Inter';
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #1C4C96;
+  border: 1px solid #fff; /* Cor de fundo ao passar o mouse */
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes para os botões de editar e excluir */
+td button .botaoeditar, .botaoexcluir {
+  border: 1px solid #fff;  /* Borda visível em torno do botão */
+  outline: none;
+  background: transparent;
+  width: 35px; /* Largura do botão */
+  height: 35px; /* Altura do botão */
+  padding: 0; /* Sem padding extra */
+  margin-right: 10px; /* Espaçamento de 10px entre os botões */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease, transform 0.3s ease; /* Transições para efeito de hover */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+td button:hover {
+  background-color: #0077B6;
+  border: 1px solid #fff; /* Cor de fundo ao passar o mouse */
+  /* transform: scale(1.1); Aumenta um pouco o tamanho do botão */
+}
+
+/* Estilização específica para o ícone de editar */
+td button .botaoeditar {
+  width: 20px;  /* Largura do ícone */
+  height: 20px; /* Altura do ícone */
+  object-fit: contain; /* Garante que a imagem se ajuste ao tamanho do botão */
+}
+
+/* Estilização específica para o ícone de excluir */
+td button .botaoexcluir {
+  width: 35px;  /* Largura do ícone */
+  height: 35px; /* Altura do ícone */
+  object-fit: contain; /* Garante que a imagem se ajuste ao tamanho do botão */
+}
+
+/* Alterações específicas ao passar o mouse sobre o botão de editar */
+td button.edit:hover {
+  background-color: #28a745; /* Cor de fundo verde para editar */
+  transform: scale(1.1);
+}
+
+/* Alterações específicas ao passar o mouse sobre o botão de excluir */
+td button.botaoexcluir.delete:hover {
+  background-color: #dc3545; /* Cor de fundo vermelha para excluir */
+  transform: scale(1.1);
+}
+
+/* Ajustando a largura das colunas de ação */
+thead tr th.acao {
+  width: 90px;  /* Largura ajustada para os botões */
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
