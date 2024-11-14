@@ -133,7 +133,8 @@ thead {
 }
 
 tr {
-  border-bottom: 2px solid rgb(238, 235, 235)!important;
+  border: 2px solid rgb(238, 235, 235)!important;
+  border-radius: 5px;
 }
 
 tbody tr td {
@@ -195,7 +196,205 @@ tbody tr td.acao {
   }
 }
 
-@media (max-width: 400px) {}
+@media (max-width: 400px) {
+  header{
+    position: fixed;
+    width: 1000%;
+    margin-top: -800px;
+    height: 60px;
+    background-color: #023E8A;
+    border-bottom: 8px solid #0D0D6C;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+  }
+  .texto{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  body {
+    margin-top: 50px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C4C96;
+  }
+  
+  button {
+    cursor: pointer;
+    width: 163px;
+    height: 40px;
+    /* transition: 0.5s ease; */
+  }
+  
+  button#new {
+    position: absolute;
+    width: 213px;
+    height: 40px;
+    margin-top: -110px;
+    margin-left: 40px;
+    background-color: #0077B6;
+    color: #fff;
+    font-size: 15px;
+    transition: 0.5s ease;
+  }
+  
+  button#new:hover {
+    background-color: #1C4C96;
+    border: 1px solid #fff;
+  }
+  
+  .container {
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    background: #0077B6;
+  }
+  
+  td {
+    color: #fff;
+    font-family: 'Inter';
+  }
+  
+  .header {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 12px;
+    background-color: #0077B6;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .header span {
+    font-weight: 400;
+    font-size: 19px;
+    font-family: 'Inter';
+    margin-top: 10px;
+    margin-left: 5px;
+    word-break: break-all;
+    color: #fff;
+  }
+  
+  #new {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(57, 57, 226);
+  }
+  
+  .divTable {
+    padding: 10px;
+    width: auto;
+    height: inherit;
+    overflow: auto;
+  }
+  
+  .divTable::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke;
+  }
+  
+  .divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgray;
+  }
+  
+  table {
+    width: 100%!important;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #1C4C96;
+    color: #fff;
+    height: 40px;
+    border-radius: 12px;
+    width: auto;
+  }
+  
+  tr {
+    border: 2px solid rgb(238, 235, 235)!important;
+    border-radius: 5px;
+  }
+  tr button 
+  
+   tbody tr td {
+    /* vertical-align: text-top; */
+    padding: 6px;
+    width: auto;
+    /* text-wrap: nowrap; */
+  } 
+  tbody tr td {
+    /* vertical-align: text-top; */
+    padding: 6px;
+    width: auto;
+  } 
+  
+  thead tr th {
+    padding: 5px;
+    text-align: center;
+    text-wrap: nowrap;
+    justify-content: center;
+  }
+  
+   tbody thead tr th.acao {
+    width: 65px;
+    justify-content: center;
+  } 
+  
+  tbody tr td.acao {
+    text-align: center;
+    width: auto;
+  }
+  td button{
+    width: auto;
+    display: flex;
+    background-color: #0077B6;
+    border: none;
+    justify-content: center;
+  }
+  /* Estilização específica para o ícone de editar */
+  td button .botaoeditar {
+    display: flex;
+    width: 15px;  /* Largura do ícone */
+    height: 15px; /* Altura do ícone */
+    /* object-fit: contain; Garante que a imagem se ajuste ao tamanho do botão */
+    justify-content: center;
+  }
+  
+  /* Estilização específica para o ícone de excluir */
+  td button .botaoexcluir {
+    display: flex;
+    width: 15px;  /* Largura do ícone */
+    height: 15px; /* Altura do ícone */
+    /* object-fit: contain; Garante que a imagem se ajuste ao tamanho do botão */
+    justify-content: center;
+  }
+  
+  /* Ajustando a largura das colunas de ação */
+  thead tr th.acao {
+    width: 90px;  /* Largura ajustada para os botões */
+    text-align: center;
+  }
+  
+  tbody tr td.acao {
+    text-align: center;
+  }
+  
+
+}
 
 .modal-container {
   width: 100vw;
@@ -281,57 +480,50 @@ tbody tr td.acao {
 
 /* Ajustes para os botões de editar e excluir */
 td button .botaoeditar, .botaoexcluir {
-  border: 1px solid #fff;  /* Borda visível em torno do botão */
+  /* border: 1px solid #fff;  Borda visível em torno do botão */
+  border: none;
   outline: none;
   background: transparent;
-  width: 35px; /* Largura do botão */
-  height: 35px; /* Altura do botão */
+  width: 15px; /* Largura do botão */
+  height: 25px; /* Altura do botão */
   padding: 0; /* Sem padding extra */
   margin-right: 10px; /* Espaçamento de 10px entre os botões */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.5s ease, transform 0.3s ease; /* Transições para efeito de hover */
+  transition: 0.5s ease; /* Transições para efeito de hover */
   border-radius: 5px; /* Borda arredondada */
 }
 
 /* Efeito ao passar o mouse sobre o botão */
-td button:hover {
+td button{
+  width: auto;
+  display: flex;
   background-color: #0077B6;
-  border: 1px solid #fff; /* Cor de fundo ao passar o mouse */
-  /* transform: scale(1.1); Aumenta um pouco o tamanho do botão */
+  border: none;
+  justify-content: center;
 }
-
 /* Estilização específica para o ícone de editar */
 td button .botaoeditar {
-  width: 20px;  /* Largura do ícone */
-  height: 20px; /* Altura do ícone */
-  object-fit: contain; /* Garante que a imagem se ajuste ao tamanho do botão */
+  display: flex;
+  width: 35px;  /* Largura do ícone */
+  height: 35px; /* Altura do ícone */
+  /* object-fit: contain; Garante que a imagem se ajuste ao tamanho do botão */
+  justify-content: center;
 }
 
 /* Estilização específica para o ícone de excluir */
 td button .botaoexcluir {
+  display: flex;
   width: 35px;  /* Largura do ícone */
   height: 35px; /* Altura do ícone */
-  object-fit: contain; /* Garante que a imagem se ajuste ao tamanho do botão */
+  /* object-fit: contain; Garante que a imagem se ajuste ao tamanho do botão */
+  justify-content: center;
 }
-
-/* Alterações específicas ao passar o mouse sobre o botão de editar */
-td button.edit:hover {
-  background-color: #28a745; /* Cor de fundo verde para editar */
-  transform: scale(1.1);
-}
-
-/* Alterações específicas ao passar o mouse sobre o botão de excluir */
-td button.botaoexcluir.delete:hover {
-  background-color: #dc3545; /* Cor de fundo vermelha para excluir */
-  transform: scale(1.1);
-}
-
 /* Ajustando a largura das colunas de ação */
 thead tr th.acao {
-  width: 90px;  /* Largura ajustada para os botões */
+  width: auto;  /* Largura ajustada para os botões */
   text-align: center;
 }
 

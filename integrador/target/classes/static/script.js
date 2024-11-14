@@ -76,10 +76,10 @@ function insertItem(item) {
     <td>${item.selecao}</td>
     <td>${item.camisa}</td>
     <td class="acao">
-      <button onclick="editItem(${item.id})"><i class='bx bx-edit'></i></button>
+      <button onclick="editItem(${item.id})"><img src="./src/icones/7270001 3.svg" class='botaoexcluir'/></button>
     </td>
     <td class="acao">
-      <button onclick="deleteItem(${item.id})"><i class='bx bx-trash'></i></button>
+      <button onclick="deleteItem(${item.id})"><img src="./src/icones/484611 2.svg" class='botaoexcluir'/></button>
     </td>
   `;
   tbody.appendChild(tr);
