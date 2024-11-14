@@ -10,7 +10,7 @@
 header{
   position: fixed;
   width: 1000%;
-  margin-top: -800px;
+  top: 0px; 
   height: 60px;
   background-color: #023E8A;
   border-bottom: 8px solid #0D0D6C;
@@ -200,7 +200,7 @@ tbody tr td.acao {
   header{
     position: fixed;
     width: 1000%;
-    margin-top: -800px;
+    top: 0px;
     height: 60px;
     background-color: #023E8A;
     border-bottom: 8px solid #0D0D6C;

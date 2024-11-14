@@ -7,10 +7,10 @@ const sSelecao = document.querySelector('#m-selecao');
 const sCamisa = document.querySelector('#m-camisa');
 const btnSalvar = document.querySelector('#btnSalvar');
 
-let itens = [];  // Aqui vamos armazenar os dados dos jogadores carregados da API.
-let id;  // Usado para armazenar o ID do jogador em edição.
+let itens = [];  // este é o array que armazena o jogador
+let id;  // esta variavel armazena o id do jogador a ser editado
 
-const apiBaseURL = 'http://localhost:8080/jogador';  // URL base da sua API
+const apiBaseURL = 'https://jogadorsenai.azurewebsites.net/jogador';  // url da api
 
 // Função para abrir o modal, seja para edição ou para adicionar um novo jogador
 function openModal(edit = false, jogadorId = null) {
