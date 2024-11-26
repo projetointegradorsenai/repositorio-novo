@@ -27,7 +27,7 @@ public class JogadorService {
 
     // Método para criar um novo jogador
     public JogadorDTO createUser(JogadorDTO jogadorDTO) {
-        Jogador jogador = new Jogador();
+        Jogador jogador = new Jogador(jogadorDTO);
         jogador.setNome(jogadorDTO.getNome());
         jogador.setIdade(jogadorDTO.getIdade());
         jogador.setTime(jogadorDTO.getTime());
